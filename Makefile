@@ -7,7 +7,7 @@ vendor jsonnetfile.lock.json: jsonnetfile.json
 	jb install
 
 .PHONY: test
-test:
+test: vendor jsonnetfile.lock.json
 	@cd test/ && make test
 
 .PHONY: fmt
